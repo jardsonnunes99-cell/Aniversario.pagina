@@ -1,2 +1,188 @@
-# Aniversario.pagina
-prompts aniversario 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>40 PROMPTS ULTRA-REALISTAS • Entrega do Ebook</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .heading-font { font-family: 'Playfair Display', serif; }
+    .gold { color: #d4af77; }
+    .card { 
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+      background: linear-gradient(145deg, #111111, #1a1a1a);
+    }
+    .card:hover { 
+      transform: translateY(-6px); 
+      box-shadow: 0 30px 40px -15px rgb(212 175 119 / 0.25); 
+      border-color: #d4af77; 
+    }
+    .header-bg { 
+      background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%); 
+    }
+    .button-gold {
+      transition: all 0.3s ease;
+    }
+    .button-gold:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgb(212 175 119);
+    }
+  </style>
+</head>
+<body class="bg-[#0a0a0a] text-white">
+
+  <!-- HEADER PREMIUM PÓS-COMPRA -->
+  <header class="header-bg py-20 border-b border-[#d4af77]/20">
+    <div class="max-w-7xl mx-auto px-8 text-center">
+      <div class="inline-flex items-center px-8 py-3 bg-[#1a1a1a] rounded-3xl text-[#d4af77] text-sm font-semibold tracking-[1px] mb-8 shadow-inner">
+        EBOOK OFICIAL • PACOTE COMPLETO
+      </div>
+
+      <h1 class="heading-font text-6xl md:text-7xl leading-none font-bold tracking-[-2px] mb-6">
+        40 PROMPTS PROFISSIONAIS<br>
+        <span class="gold">FOTOS DE ANIVERSÁRIO</span><br>
+        ULTRA-REALISTAS
+      </h1>
+
+      <p class="text-2xl text-gray-300 max-w-2xl mx-auto mb-8">
+        Design premium • Sem imagens • Apenas prompts prontos para copiar
+      </p>
+
+      <div class="inline-flex items-center gap-4 bg-[#111] border border-[#d4af77]/30 px-10 py-5 rounded-3xl text-[#d4af77] text-xl font-medium mb-10">
+        <i class="fas fa-check-circle text-4xl"></i>
+        ✅ COMPRA REALIZADA COM SUCESSO
+      </div>
+
+      <!-- BOTÃO QUE ABRE O GEMINI AO CLICAR -->
+      <a href="https://gemini.google.com/" target="_blank"
+         class="button-gold inline-flex items-center gap-4 px-12 py-7 bg-gradient-to-r from-[#d4af77] to-amber-300 text-black font-semibold text-2xl rounded-3xl mb-8">
+        <i class="fas fa-external-link-alt"></i>
+        TESTAR PROMPTS NO GEMINI AGORA
+      </a>
+      <p class="text-gray-400 text-lg">Clique acima e cole qualquer prompt diretamente no Gemini</p>
+
+      <p class="mt-12 text-gray-400 text-2xl">Aqui estão os seus <strong class="text-white">40 prompts ultra-realistas</strong> de aniversário.</p>
+    </div>
+  </header>
+
+  <!-- LISTA DE PROMPTS -->
+  <section class="py-24 bg-black">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center mb-16">
+        <span class="px-6 py-2 bg-[#d4af77]/10 text-[#d4af77] text-sm font-semibold tracking-widest rounded-3xl">40 ESTILOS EXCLUSIVOS</span>
+        <h2 class="heading-font text-5xl font-semibold mt-6">Prompts completos e prontos para usar</h2>
+        <p class="text-gray-400 mt-4 max-w-md mx-auto">Clique em qualquer botão e receba confetes dourados automaticamente.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="styles-grid"></div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="bg-[#111] py-12 border-t border-[#d4af77]/20 text-center text-sm text-gray-400">
+    Obrigado pela compra • 40 prompts ultra-realistas entregues com sucesso
+  </footer>
+
+  <script>
+    // === 40 PROMPTS (exatamente os mesmos da versão anterior) ===
+    const styles = [
+      { id:1, title:"Estúdio preto fosco + bolo minimalista", legend:"Foto em estúdio com fundo preto fosco, iluminação lateral dramática destacando o rosto, bolo minimalista com vela acesa. Expressão confiante e elegante.", note:"➡️ Substituir idade em: [IDADE] • Envie 3 imagens nítidas do rosto", basePrompt:"Ultra-realistic studio birthday portrait of a woman celebrating her [IDADE], black matte background, cinematic side lighting, soft shadows, holding a minimalist cake with a single candle, confident facial expression, luxury photography, high-end fashion look, 85mm lens, f/1.8, hyper detailed skin texture, natural color grading, shot in professional studio, RAW quality, 8K resolution" },
+      { id:2, title:"Fundo branco clean com balões", legend:"Ensaio com fundo branco clean, iluminação high-key, sorriso natural, segurando balões transparentes.", note:"➡️ [IDADE] • Envie 3 fotos frontais do rosto bem nítidas", basePrompt:"Ultra-realistic birthday photoshoot in white studio background, high-key lighting, woman celebrating [IDADE], holding transparent balloons, natural smile, clean aesthetic, commercial photography style, sharp focus, soft shadows, 50mm lens, f/2, hyper realistic skin, studio-grade lighting setup, 8K RAW" },
+      { id:3, title:"Glam vestido dourado", legend:"Foto glamourosa com vestido dourado, fundo escuro com luz de recorte, estilo editorial.", note:"➡️ [IDADE] • 3 imagens nítidas do rosto", basePrompt:"Luxury ultra-realistic birthday portrait of a woman wearing a gold dress, celebrating [IDADE], dark studio background with rim lighting, editorial fashion photography, dramatic lighting, glossy skin highlights, 85mm lens, high contrast, ultra sharp details, magazine cover style, RAW 8K" },
+      { id:4, title:"Sentada em banco alto", legend:"Foto sentada em banco alto, fundo cinza neutro, iluminação suave estilo beauty.", note:"➡️ [IDADE] • Envie 3 fotos nítidas do rosto", basePrompt:"Ultra-realistic studio portrait, woman sitting on stool, celebrating [IDADE], neutral grey background, soft beauty lighting, clean composition, natural pose, flawless skin detail, 50mm lens, f/1.8, studio photography realism, RAW 8K" },
+      { id:5, title:"Com bolo grande festivo", legend:"Foto com bolo grande decorado, sorriso aberto, clima festivo elegante.", note:"➡️ [IDADE] • 3 imagens nítidas do rosto", basePrompt:"Ultra-realistic birthday shoot, woman celebrating [IDADE], holding a large decorated cake, elegant festive mood, studio lighting, warm tones, high detail texture, cinematic realism, 85mm portrait lens, RAW image, 8K resolution" },
+      { id:6, title:"Close-up vela nos olhos", legend:"Close-up no rosto com maquiagem impecável e vela refletindo nos olhos.", note:"➡️ [IDADE] • Envie 3 fotos nítidas do rosto", basePrompt:"Extreme close-up ultra-realistic portrait of a woman celebrating [IDADE], candle light reflection in eyes, beauty makeup, studio lighting, macro detail skin texture, 100mm lens, cinematic depth of field, hyper realistic, RAW 8K" },
+      { id:7, title:"Revista fundo vibrante", legend:"Foto estilo revista, fundo colorido vibrante, pose moderna.", note:"➡️ [IDADE] • 3 imagens nítidas do rosto", basePrompt:"Ultra-realistic editorial birthday photoshoot, vibrant colored background, woman celebrating [IDADE], modern fashion pose, magazine style, bold lighting, high saturation, 85mm lens, ultra detailed skin, professional studio, 8K RAW" },
+      { id:8, title:"Champanhe estourando", legend:"Foto com champanhe estourando, movimento congelado.", note:"➡️ [IDADE] • 3 fotos claras do rosto", basePrompt:"Ultra-realistic high-speed shot of woman celebrating [IDADE], champagne popping, liquid splash frozen in air, studio lighting, dramatic action shot, ultra sharp focus, 1/4000 shutter effect, RAW 8K" },
+      { id:9, title:"Minimalista preto & branco", legend:"Foto minimalista com roupa preta e fundo branco.", note:"➡️ [IDADE] • Envie 3 imagens nítidas do rosto", basePrompt:"Ultra-realistic minimalist birthday portrait, woman wearing black outfit, white studio background, celebrating [IDADE], clean composition, high contrast, fashion photography, 50mm lens, ultra sharp, 8K RAW" },
+      { id:10, title:"Confetes caindo", legend:"Foto com confetes caindo ao redor.", note:"➡️ [IDADE] • 3 imagens nítidas do rosto", basePrompt:"Ultra-realistic birthday photoshoot with falling confetti, woman celebrating [IDADE], studio lighting, dynamic scene, frozen motion, cinematic realism, 85mm lens, ultra detailed, RAW 8K" },
+      { id:11, title:"Neon rosa/azul noturno", legend:"Fundo neon rosa/azul, vibe noturna.", note:"➡️ [IDADE] • Envie 3 fotos nítidas do rosto", basePrompt:"Hyper-realistic neon lighting birthday portrait, cyber aesthetic, woman celebrating [IDADE], glossy skin, studio realism, 8K RAW" },
+      { id:12, title:"Dourado com balões de luxo", legend:"Foto de aniversário com balões de luxo.", note:"➡️ [IDADE] • Enviar 3 imagens nítidas do rosto", basePrompt:"High-end studio birthday portrait, silver and gold balloon set, reflective floor, softbox lighting, ultra realistic skin rendering, 85mm lens, beauty editorial style, sharp focus eyes, DSLR realism" },
+      { id:13, title:"Ensaio dourado com luzes", legend:"Ensaio dourado de aniversário.", note:"➡️ [IDADE] • 3 imagens nítidas do rosto", basePrompt:"Ultra-real studio portrait, golden sparkle lights, soft haze, editorial fashion pose, 85mm lens, hyper realistic skin rendering" },
+      { id:14, title:"Rosa e dourado luxuoso", legend:"Ensaio rosa dourado aniversário.", note:"➡️ [IDADE] • 3 fotos nítidas do rosto", basePrompt:"Studio portrait, pink and gold aesthetic, luxury balloons, ultra realistic skin texture, fashion photography lighting" },
+      { id:15, title:"Presente elegante", legend:"Segurando presente elegante.", note:"➡️ [IDADE] • 3 imagens nítidas do rosto", basePrompt:"Luxury fashion birthday shoot, woman celebrating [IDADE], holding luxury gift box, studio lighting, cinematic realism, 85mm lens" },
+      { id:16, title:"Retrato estúdio fundo neutro", legend:"Retrato em estúdio com fundo neutro elegante, iluminação softbox frontal criando sombras suaves e destaque no rosto. Expressão confiante e olhar direto para câmera.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic studio birthday portrait of a woman aged [IDADE], softbox lighting, neutral background, 85mm lens, shallow depth of field, hyper-detailed skin texture, cinematic lighting, professional photography, sharp focus on eyes, natural skin imperfections, high dynamic range, photorealistic, studio quality, 8k resolution" },
+      { id:17, title:"Sentada em cadeira luxuosa", legend:"Foto sentada em cadeira luxuosa, fundo escuro com iluminação dramática lateral criando contraste forte.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic birthday photoshoot of a [IDADE]-year-old woman sitting on a luxury chair, dark background, dramatic side lighting, Rembrandt lighting, ultra detailed face, 50mm lens, cinematic shadows, high contrast, photorealistic, studio lighting, sharp details, 8k" },
+      { id:18, title:"Close-up extremo beauty", legend:"Close-up extremo no rosto com maquiagem leve e iluminação beauty (luz frontal suave).", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Extreme close-up ultra-realistic portrait of a [IDADE]-year-old woman, beauty lighting, soft diffused light, flawless skin texture, visible pores, 100mm macro lens, ultra sharp focus, high resolution, photorealistic, studio setup" },
+      { id:19, title:"Balões dourados ao fundo", legend:"Foto com balões dourados ao fundo, clima de aniversário sofisticado.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic birthday photoshoot of a [IDADE]-year-old woman with golden balloons background, studio lighting, warm tones, cinematic composition, detailed face, professional photography, sharp focus, realistic skin texture, 8k resolution" },
+      { id:20, title:"Com bolo elegante em primeiro plano", legend:"Foto com bolo de aniversário elegante em primeiro plano, iluminação suave lateral.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic studio birthday portrait of a [IDADE]-year-old woman holding a luxury birthday cake, soft side lighting, shallow depth of field, detailed textures, photorealistic lighting, professional composition, 8k" },
+      { id:21, title:"Sorriso espontâneo", legend:"Foto sorrindo espontaneamente, capturando emoção real.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Candid ultra-realistic portrait of a [IDADE]-year-old woman laughing naturally, studio lighting, natural expression, high detail skin texture, cinematic light, professional photography, 85mm lens, photorealistic" },
+      { id:22, title:"Vestido elegante high fashion", legend:"Foto com vestido elegante, iluminação de estúdio high fashion.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"High fashion ultra-realistic birthday photoshoot of a [IDADE]-year-old woman in elegant dress, studio lighting setup, fashion photography style, detailed textures, cinematic composition, sharp focus, 8k" },
+      { id:23, title:"Spotlight fundo preto", legend:"Fundo preto total com luz focada no rosto (efeito spotlight).", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic portrait of a [IDADE]-year-old woman with spotlight lighting, black background, dramatic shadows, cinematic look, hyper-detailed skin, 50mm lens, professional studio" },
+      { id:24, title:"Confetes congelados no ar", legend:"Foto com confetes congelados no ar.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic birthday photoshoot of a [IDADE]-year-old woman with confetti frozen mid-air, high shutter speed, studio lighting, vibrant colors, sharp focus, photorealistic, 8k" },
+      { id:25, title:"Estilo editorial de revista", legend:"Foto estilo editorial de revista.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Editorial magazine style ultra-realistic portrait of a [IDADE]-year-old woman, studio lighting, fashion composition, highly detailed, cinematic tones, photorealistic" },
+      { id:26, title:"Iluminação suave fundo pastel", legend:"Foto com iluminação suave e fundo pastel.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic portrait of a [IDADE]-year-old woman with pastel background, soft lighting, beauty photography style, smooth tones, high detail" },
+      { id:27, title:"Olhando para baixo luz lateral", legend:"Foto olhando para baixo com luz lateral suave.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic side-lit portrait of a [IDADE]-year-old woman looking down, cinematic lighting, soft shadows, 85mm lens, photorealistic" },
+      { id:28, title:"Expressão séria e elegante", legend:"Foto com expressão séria e elegante.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Serious ultra-realistic portrait of a [IDADE]-year-old woman, studio lighting, sharp focus, detailed skin texture, cinematic composition" },
+      { id:29, title:"Fundo branco estilo catálogo", legend:"Foto com fundo branco estilo catálogo.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic catalog-style portrait of a [IDADE]-year-old woman, white background, clean lighting, high detail, professional studio" },
+      { id:30, title:"Luz quente pôr do sol simulado", legend:"Foto com luz quente estilo pôr do sol (simulado em estúdio).", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic portrait of a [IDADE]-year-old woman with warm sunset lighting simulation, studio setup, cinematic tones" },
+      { id:31, title:"Maquiagem glow pele iluminada", legend:"Foto com maquiagem glow e pele iluminada.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic glowing skin portrait of a [IDADE]-year-old woman, beauty lighting, radiant skin, high detail" },
+      { id:32, title:"Ângulo 45 graus", legend:"Foto em ângulo 45 graus com sombra suave.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic 45-degree angle portrait of a [IDADE]-year-old woman, soft shadow lighting, studio quality" },
+      { id:33, title:"Fundo colorido vibrante", legend:"Foto com fundo colorido vibrante.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic vibrant background portrait of a [IDADE]-year-old woman, colorful backdrop, studio lighting" },
+      { id:34, title:"Segurando número da idade", legend:"Foto segurando número da idade.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic birthday portrait of a [IDADE]-year-old woman holding number balloons, studio lighting, sharp focus" },
+      { id:35, title:"Luz dura estilo fashion", legend:"Foto com luz dura estilo fashion.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic hard light fashion portrait of a [IDADE]-year-old woman, sharp shadows, studio setup" },
+      { id:36, title:"Pose natural apoiada na parede", legend:"Foto com pose natural apoiada na parede.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic portrait of a [IDADE]-year-old woman leaning on wall, natural pose, studio lighting" },
+      { id:37, title:"Iluminação lateral dramática", legend:"Foto com iluminação lateral dramática.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic dramatic side lighting portrait of a [IDADE]-year-old woman, cinematic shadows" },
+      { id:38, title:"Luxo fundo escuro com brilho", legend:"Foto estilo luxo com fundo escuro e brilho.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Luxury ultra-realistic portrait of a [IDADE]-year-old woman, dark glossy background, cinematic lighting" },
+      { id:39, title:"Olhando por cima do ombro", legend:"Foto olhando por cima do ombro.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic over-the-shoulder portrait of a [IDADE]-year-old woman, studio lighting, sharp focus\n\nUltra-realistic professional Instagram advertisement photo, a highly detailed human subject representing a [NICHE], holding or interacting naturally with [PRODUCT], confident and authentic expression, perfect facial symmetry but natural imperfections preserved (skin pores, subtle texture, micro details), cinematic studio lighting with softbox + rim light, realistic shadows and highlights, global illumination, HDR, shot on full-frame DSLR, 85mm lens, f/1.8 aperture, shallow depth of field, sharp focus on eyes, creamy background bokeh, luxury modern environment or minimal clean backdrop depending on brand positioning.\nColor grading: natural skin tones, high dynamic range, slightly warm tones, no over-saturation, no artificial smoothing.\nComposition: centered subject with advertising framing, negative space for text, rule of thirds, high conversion commercial style.\nDetails: ultra high resolution 8K, photorealistic rendering, no AI artifacts, no distortions, no extra fingers, anatomically correct hands, realistic reflections in eyes, subtle motion realism.\nStyle: premium brand campaign, Instagram ad ready, high CTR visual, looks like real photoshoot, not AI generated.\n--ar 1:1 --quality max --style raw --no blur face, no fake skin, no plastic texture, no overprocessing" },
+      { id:40, title:"Expressão feliz com presente", legend:"Foto com expressão feliz segurando presente.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic birthday portrait of a [IDADE]-year-old woman holding gift box, smiling, studio lighting, photorealistic, high detail, 8k" }
+    ]
+
+    const additionalText = `\n\nCreate a hyper-realistic photograph with absolute fidelity to real-world physics, avoiding any artificial or AI-generated appearance.\n\nSubject: [descreva exatamente a cena acima com todos os detalhes fornecidos]\n\nTechnical requirements:\n- Shot on a full-frame DSLR camera (Canon EOS R5), 85mm f/1.4 lens\n- Natural skin texture with visible pores, micro-imperfections, and subtle asymmetry\n- Realistic lighting setup (softbox key light + natural ambient light), physically accurate shadows and highlights\n- Cinematic depth of field with natural bokeh (no artificial blur edges)\n- Correct color grading based on real camera profiles (no oversaturation, no HDR exaggeration)\n- High dynamic range with balanced exposure (no blown highlights or crushed shadows)\n- Fine details: fabric texture, hair strands, reflections in eyes, environmental imperfections\n\nEnvironment:\n- Real-world setting with authentic details (dust particles, slight noise, natural reflections, imperfect surfaces)\n- No surreal or exaggerated elements\n\nComposition:\n- Rule of thirds, professional framing, slight lens imperfections (chromatic aberration, minimal grain)\n\nSTRICT NEGATIVE PROMPT:\n- No AI artifacts\n- No plastic skin\n- No over-sharpening\n- No unrealistic symmetry\n- No distorted anatomy\n- No fake lighting\n- No CGI look\n- No rendering style\n- No cartoon or illustration traits\n\nFinal output:\n- Must look exactly like a real photograph taken by a professional photographer\n- Indistinguishable from reality\n- Ultra high resolution (8K), RAW photo style`
+
+    function createStyleCard(style) {
+      return `
+        <div class="card border border-[#d4af77]/30 rounded-3xl p-9 flex flex-col h-full">
+          <div class="flex justify-between items-start mb-8">
+            <span class="text-xs font-mono bg-[#d4af77]/10 text-[#d4af77] px-5 py-2 rounded-3xl">ESTILO ${style.id}</span>
+            <i class="fas fa-birthday-cake text-6xl text-[#d4af77]/10"></i>
+          </div>
+          <h3 class="heading-font text-2xl leading-tight mb-5">${style.title}</h3>
+          <p class="text-gray-300 flex-1 leading-relaxed">${style.legend}</p>
+          <p class="text-amber-200 text-sm mt-10 mb-10">${style.note}</p>
+          
+          <button onclick="copyPrompt(${style.id});" 
+                  class="button-gold w-full py-6 bg-gradient-to-r from-[#d4af77] to-amber-300 text-black font-semibold rounded-3xl flex items-center justify-center gap-3 text-lg">
+            <i class="fas fa-copy"></i>
+            COPIAR PROMPT COMPLETO
+          </button>
+        </div>
+      `
+    }
+
+    function copyPrompt(id) {
+      const style = styles.find(s => s.id === id)
+      if (!style) return
+
+      let fullPrompt = style.basePrompt.replace(/\[AGE\]/g, '[IDADE]').replace(/\[IDADE\]/g, '[sua idade aqui]')
+      fullPrompt += additionalText
+
+      navigator.clipboard.writeText(fullPrompt).then(() => {
+        confetti({ particleCount: 200, spread: 90, origin: { y: 0.6 }, colors: ['#d4af77', '#f5e8c7', '#c9a66b', '#ffffff'] })
+        
+        const btn = event.target.closest('button')
+        const original = btn.innerHTML
+        btn.innerHTML = `✅ COPIADO COM SUCESSO!`
+        btn.style.background = '#22c55e'
+        setTimeout(() => { 
+          btn.innerHTML = original
+          btn.style.background = '' 
+        }, 2200)
+      })
+    }
+
+    window.onload = () => {
+      const grid = document.getElementById('styles-grid')
+      styles.forEach(style => {
+        const div = document.createElement('div')
+        div.innerHTML = createStyleCard(style)
+        grid.appendChild(div.firstElementChild)
+      })
+    }
+  </script>
+</body>
+</html>
