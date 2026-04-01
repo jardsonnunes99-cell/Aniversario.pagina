@@ -9,86 +9,133 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    .heading-font { font-family: 'Playfair Display', serif; }
-    .gold { color: #d4af77; }
-    .card { 
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+    
+    body { 
+      font-family: 'Inter', system-ui, sans-serif; 
+    }
+    .heading-font { 
+      font-family: 'Playfair Display', serif; 
+    }
+    .gold { 
+      color: #d4af77; 
+    }
+    
+    .card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       background: linear-gradient(145deg, #111111, #1a1a1a);
     }
-    .card:hover { 
-      transform: translateY(-6px); 
-      box-shadow: 0 30px 40px -15px rgb(212 175 119 / 0.25); 
-      border-color: #d4af77; 
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 35px -12px rgb(212 175 119 / 0.3);
+      border-color: #d4af77;
     }
-    .header-bg { 
-      background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%); 
+    
+    .header-bg {
+      background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
     }
+    
     .button-gold {
       transition: all 0.3s ease;
     }
     .button-gold:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 30px rgb(212 175 119);
+      box-shadow: 0 0 35px rgb(212 175 119 / 0.6);
+    }
+
+    /* 🔥 MELHORIAS ESPECÍFICAS PARA CELULAR */
+    .hero-title {
+      font-size: 2.75rem;
+      line-height: 1.05;
+    }
+    @media (min-width: 640px) {
+      .hero-title { font-size: 3.5rem; }
+    }
+    @media (min-width: 768px) {
+      .hero-title { font-size: 4.5rem; line-height: 1; }
+    }
+    @media (min-width: 1024px) {
+      .hero-title { font-size: 5.5rem; }
+    }
+
+    .section-padding {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    @media (min-width: 768px) {
+      .section-padding {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
     }
   </style>
 </head>
-<body class="bg-[#0a0a0a] text-white">
-
+<body class="bg-[#0a0a0a] text-white overflow-x-hidden">
   <!-- HEADER PREMIUM PÓS-COMPRA -->
-  <header class="header-bg py-20 border-b border-[#d4af77]/20">
-    <div class="max-w-7xl mx-auto px-8 text-center">
-      <div class="inline-flex items-center px-8 py-3 bg-[#1a1a1a] rounded-3xl text-[#d4af77] text-sm font-semibold tracking-[1px] mb-8 shadow-inner">
+  <header class="header-bg py-10 md:py-20 border-b border-[#d4af77]/20">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 text-center">
+      
+      <!-- Badge superior -->
+      <div class="inline-flex items-center px-6 py-3 bg-[#1a1a1a] rounded-3xl text-[#d4af77] text-sm font-semibold tracking-[1px] mb-8 shadow-inner">
+        <i class="fas fa-crown mr-2"></i>
         EBOOK OFICIAL • PACOTE COMPLETO
       </div>
 
-      <h1 class="heading-font text-6xl md:text-7xl leading-none font-bold tracking-[-2px] mb-6">
-        40 PROMPTS PROFISSIONAIS<br>
-        <span class="gold">FOTOS DE ANIVERSÁRIO</span><br>
-        ULTRA-REALISTAS
-      </h1>
+      <!-- Título principal (totalmente responsivo) -->
+      <div class="flex items-center justify-center gap-4 flex-wrap mb-6">
+        <h1 class="hero-title heading-font font-bold tracking-[-2px] leading-none text-center">
+          40 PROMPTS PROFISSIONAIS<br>
+          <span class="gold">FOTOS DE ANIVERSÁRIO</span><br>
+          ULTRA-REALISTAS
+        </h1>
+        <!-- Emoji do bolo exatamente como na imagem -->
+        <div class="text-7xl md:text-8xl">🧁</div>
+      </div>
 
-      <p class="text-2xl text-gray-300 max-w-2xl mx-auto mb-8">
+      <p class="text-xl sm:text-2xl text-gray-300 max-w-2xl mx-auto mb-10 px-2">
         Design premium • Sem imagens • Apenas prompts prontos para copiar
       </p>
 
-      <div class="inline-flex items-center gap-4 bg-[#111] border border-[#d4af77]/30 px-10 py-5 rounded-3xl text-[#d4af77] text-xl font-medium mb-10">
+      <!-- Sucesso da compra -->
+      <div class="inline-flex items-center gap-4 bg-[#111] border border-[#d4af77]/30 px-8 sm:px-10 py-5 rounded-3xl text-[#d4af77] text-lg sm:text-xl font-medium mb-12">
         <i class="fas fa-check-circle text-4xl"></i>
         ✅ COMPRA REALIZADA COM SUCESSO
       </div>
 
-      <!-- BOTÃO QUE ABRE O GEMINI AO CLICAR -->
+      <!-- Botão principal (amarelo dourado igual à imagem) -->
       <a href="https://gemini.google.com/" target="_blank"
-         class="button-gold inline-flex items-center gap-4 px-12 py-7 bg-gradient-to-r from-[#d4af77] to-amber-300 text-black font-semibold text-2xl rounded-3xl mb-8">
+         class="button-gold mx-auto inline-flex items-center gap-4 px-10 sm:px-14 py-7 bg-gradient-to-r from-[#d4af77] to-amber-300 text-black font-semibold text-xl sm:text-2xl rounded-3xl mb-6 shadow-xl">
         <i class="fas fa-external-link-alt"></i>
         TESTAR PROMPTS NO GEMINI AGORA
       </a>
-      <p class="text-gray-400 text-lg">Clique acima e cole qualquer prompt diretamente no Gemini</p>
 
-      <p class="mt-12 text-gray-400 text-2xl">Aqui estão os seus <strong class="text-white">40 prompts ultra-realistas</strong> de aniversário.</p>
+      <p class="text-gray-400 text-base sm:text-lg mb-2">Clique acima e cole qualquer prompt diretamente no Gemini</p>
+      <p class="mt-8 text-gray-400 text-xl sm:text-2xl">Aqui estão os seus <strong class="text-white">40 prompts ultra-realistas</strong> de aniversário.</p>
     </div>
   </header>
 
   <!-- LISTA DE PROMPTS -->
-  <section class="py-24 bg-black">
-    <div class="max-w-7xl mx-auto px-8">
-      <div class="text-center mb-16">
-        <span class="px-6 py-2 bg-[#d4af77]/10 text-[#d4af77] text-sm font-semibold tracking-widest rounded-3xl">40 ESTILOS EXCLUSIVOS</span>
-        <h2 class="heading-font text-5xl font-semibold mt-6">Prompts completos e prontos para usar</h2>
-        <p class="text-gray-400 mt-4 max-w-md mx-auto">Clique em qualquer botão e receba confetes dourados automaticamente.</p>
+  <section class="section-padding bg-black">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="text-center mb-12 md:mb-16">
+        <span class="px-6 py-2.5 bg-[#d4af77]/10 text-[#d4af77] text-sm font-semibold tracking-widest rounded-3xl">40 ESTILOS EXCLUSIVOS</span>
+        <h2 class="heading-font text-4xl md:text-5xl font-semibold mt-6">Prompts completos e prontos para usar</h2>
+        <p class="text-gray-400 mt-4 max-w-md mx-auto">Clique em qualquer cartão e ganhe confetes dourados automaticamente ✨</p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="styles-grid"></div>
+      <!-- Grid 100% responsivo (1 coluna no celular, nunca corta) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8" id="styles-grid"></div>
     </div>
   </section>
 
   <!-- RODAPÉ -->
-  <footer class="bg-[#111] py-12 border-t border-[#d4af77]/20 text-center text-sm text-gray-400">
-    Obrigado pela compra • 40 prompts ultra-realistas entregues com sucesso
+  <footer class="bg-[#111] py-10 border-t border-[#d4af77]/20 text-center text-sm text-gray-400">
+    <div class="max-w-7xl mx-auto px-5">
+      Obrigado pela compra • 40 prompts ultra-realistas entregues com sucesso
+    </div>
   </footer>
 
   <script>
-    // === 40 PROMPTS (exatamente os mesmos da versão anterior) ===
+    // === 40 PROMPTS (mantidos exatamente iguais, mas limpo o prompt 39 que tinha texto errado) ===
     const styles = [
       { id:1, title:"Estúdio preto fosco + bolo minimalista", legend:"Foto em estúdio com fundo preto fosco, iluminação lateral dramática destacando o rosto, bolo minimalista com vela acesa. Expressão confiante e elegante.", note:"➡️ Substituir idade em: [IDADE] • Envie 3 imagens nítidas do rosto", basePrompt:"Ultra-realistic studio birthday portrait of a woman celebrating her [IDADE], black matte background, cinematic side lighting, soft shadows, holding a minimalist cake with a single candle, confident facial expression, luxury photography, high-end fashion look, 85mm lens, f/1.8, hyper detailed skin texture, natural color grading, shot in professional studio, RAW quality, 8K resolution" },
       { id:2, title:"Fundo branco clean com balões", legend:"Ensaio com fundo branco clean, iluminação high-key, sorriso natural, segurando balões transparentes.", note:"➡️ [IDADE] • Envie 3 fotos frontais do rosto bem nítidas", basePrompt:"Ultra-realistic birthday photoshoot in white studio background, high-key lighting, woman celebrating [IDADE], holding transparent balloons, natural smile, clean aesthetic, commercial photography style, sharp focus, soft shadows, 50mm lens, f/2, hyper realistic skin, studio-grade lighting setup, 8K RAW" },
@@ -128,7 +175,7 @@
       { id:36, title:"Pose natural apoiada na parede", legend:"Foto com pose natural apoiada na parede.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic portrait of a [IDADE]-year-old woman leaning on wall, natural pose, studio lighting" },
       { id:37, title:"Iluminação lateral dramática", legend:"Foto com iluminação lateral dramática.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic dramatic side lighting portrait of a [IDADE]-year-old woman, cinematic shadows" },
       { id:38, title:"Luxo fundo escuro com brilho", legend:"Foto estilo luxo com fundo escuro e brilho.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Luxury ultra-realistic portrait of a [IDADE]-year-old woman, dark glossy background, cinematic lighting" },
-      { id:39, title:"Olhando por cima do ombro", legend:"Foto olhando por cima do ombro.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic over-the-shoulder portrait of a [IDADE]-year-old woman, studio lighting, sharp focus\n\nUltra-realistic professional Instagram advertisement photo, a highly detailed human subject representing a [NICHE], holding or interacting naturally with [PRODUCT], confident and authentic expression, perfect facial symmetry but natural imperfections preserved (skin pores, subtle texture, micro details), cinematic studio lighting with softbox + rim light, realistic shadows and highlights, global illumination, HDR, shot on full-frame DSLR, 85mm lens, f/1.8 aperture, shallow depth of field, sharp focus on eyes, creamy background bokeh, luxury modern environment or minimal clean backdrop depending on brand positioning.\nColor grading: natural skin tones, high dynamic range, slightly warm tones, no over-saturation, no artificial smoothing.\nComposition: centered subject with advertising framing, negative space for text, rule of thirds, high conversion commercial style.\nDetails: ultra high resolution 8K, photorealistic rendering, no AI artifacts, no distortions, no extra fingers, anatomically correct hands, realistic reflections in eyes, subtle motion realism.\nStyle: premium brand campaign, Instagram ad ready, high CTR visual, looks like real photoshoot, not AI generated.\n--ar 1:1 --quality max --style raw --no blur face, no fake skin, no plastic texture, no overprocessing" },
+      { id:39, title:"Olhando por cima do ombro", legend:"Foto olhando por cima do ombro.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic over-the-shoulder portrait of a [IDADE]-year-old woman, studio lighting, sharp focus" },
       { id:40, title:"Expressão feliz com presente", legend:"Foto com expressão feliz segurando presente.", note:"👉 [ALTERAR IDADE AQUI: __] 👉 [ENVIE 3 FOTOS NÍTIDAS DO ROSTO]", basePrompt:"Ultra-realistic birthday portrait of a [IDADE]-year-old woman holding gift box, smiling, studio lighting, photorealistic, high detail, 8k" }
     ]
 
@@ -136,7 +183,7 @@
 
     function createStyleCard(style) {
       return `
-        <div class="card border border-[#d4af77]/30 rounded-3xl p-9 flex flex-col h-full">
+        <div class="card border border-[#d4af77]/30 rounded-3xl p-7 flex flex-col h-full">
           <div class="flex justify-between items-start mb-8">
             <span class="text-xs font-mono bg-[#d4af77]/10 text-[#d4af77] px-5 py-2 rounded-3xl">ESTILO ${style.id}</span>
             <i class="fas fa-birthday-cake text-6xl text-[#d4af77]/10"></i>
@@ -144,9 +191,9 @@
           <h3 class="heading-font text-2xl leading-tight mb-5">${style.title}</h3>
           <p class="text-gray-300 flex-1 leading-relaxed">${style.legend}</p>
           <p class="text-amber-200 text-sm mt-10 mb-10">${style.note}</p>
-          
-          <button onclick="copyPrompt(${style.id});" 
-                  class="button-gold w-full py-6 bg-gradient-to-r from-[#d4af77] to-amber-300 text-black font-semibold rounded-3xl flex items-center justify-center gap-3 text-lg">
+         
+          <button onclick="copyPrompt(${style.id});"
+                  class="button-gold w-full py-6 bg-gradient-to-r from-[#d4af77] to-amber-300 text-black font-semibold rounded-3xl flex items-center justify-center gap-3 text-lg active:scale-95">
             <i class="fas fa-copy"></i>
             COPIAR PROMPT COMPLETO
           </button>
@@ -162,15 +209,25 @@
       fullPrompt += additionalText
 
       navigator.clipboard.writeText(fullPrompt).then(() => {
-        confetti({ particleCount: 200, spread: 90, origin: { y: 0.6 }, colors: ['#d4af77', '#f5e8c7', '#c9a66b', '#ffffff'] })
-        
-        const btn = event.target.closest('button')
-        const original = btn.innerHTML
+        // Confetes dourados
+        confetti({
+          particleCount: 220,
+          spread: 90,
+          origin: { y: 0.6 },
+          colors: ['#d4af77', '#f5e8c7', '#c9a66b', '#ffffff']
+        })
+
+        // Feedback visual no botão
+        const btn = event.currentTarget
+        const originalHTML = btn.innerHTML
         btn.innerHTML = `✅ COPIADO COM SUCESSO!`
         btn.style.background = '#22c55e'
-        setTimeout(() => { 
-          btn.innerHTML = original
-          btn.style.background = '' 
+        btn.style.transform = 'scale(1.05)'
+
+        setTimeout(() => {
+          btn.innerHTML = originalHTML
+          btn.style.background = ''
+          btn.style.transform = ''
         }, 2200)
       })
     }
@@ -178,9 +235,9 @@
     window.onload = () => {
       const grid = document.getElementById('styles-grid')
       styles.forEach(style => {
-        const div = document.createElement('div')
-        div.innerHTML = createStyleCard(style)
-        grid.appendChild(div.firstElementChild)
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = createStyleCard(style)
+        grid.appendChild(wrapper.firstElementChild)
       })
     }
   </script>
